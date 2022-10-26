@@ -4,12 +4,11 @@ import random
 number1 = float(input('Please input number1:'))
 number2 = float(input('Please input number2:'))
 if number1 > number2:
-    print("minimum number is:", number2,'and maximum number is:', number1)
-elif number1< number2:
+    print("minimum number is:", number2, 'and maximum number is:', number1)
+elif number1 < number2:
     print("minimum number is:", number1, 'and maximum number is:', number2)
 elif number1 == number2:
     print('Two numbers are equal!')
-
 
 
 # Exercise 2: Iterative statements/Loops===========================
@@ -61,8 +60,7 @@ for i, element in enumerate(department):
 print(dic)
 
 
-#Exercise 5: Simulate a coin toss=================================
-
+# Exercise 5: Simulate a coin toss=================================
 head = 0
 tail = 0
 temp = -1
@@ -73,10 +71,10 @@ if mode == 1:
     for i in range(100):
         result = random.randint(0, 1)
         if result == 1:
-            print('head')
+            print(i, 'head')
             head += 1
         else:
-            print('tail')
+            print(i, 'tail')
             tail += 1
         if result != temp:
             num_flip += 1
@@ -86,13 +84,14 @@ if mode == 1:
 # Modify this code so that we have a biased coin; the user should be able to set the level of bias
 if mode == 2:
     for i in range(1000):
+        print(i)
         result = random.random()
         if result < 0.2:
-            print('head')
+            print(i, 'head')
             head += 1
             temp_num_flip = 1
         else:
-            print('tail')
+            print(i, 'tail')
             tail += 1
             temp_num_flip = 0
         if temp_num_flip != temp:
@@ -102,4 +101,4 @@ if mode == 2:
 else:
     print('Please enter the right number')
 
-print('head is:',head,'tail is:',tail)
+print('head is:', head, 'tail is:', tail)
